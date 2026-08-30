@@ -25,7 +25,7 @@ export function WarRoomAtmosphere({ className }: { className?: string }) {
         />
       ))}
       <div className="warroom-flag absolute left-[3%] top-[10%] h-28 w-40 origin-top-left -rotate-6 bg-orange-600/55 [clip-path:polygon(0_0,100%_18%,78%_42%,100%_64%,70%_86%,0_100%)] shadow-[0_0_24px_rgba(234,88,12,0.28)] motion-safe:animate-[warroom-flag_4s_ease-in-out_infinite]" />
-      <div className="warroom-flag absolute right-[3%] top-[10%] h-28 w-40 origin-top-right rotate-6 bg-orange-600/55 [clip-path:polygon(0_18%,100%_0,100%_100%,30%_86%,0_64%,22%_42%)] shadow-[0_0_24px_rgba(234,88,12,0.28)] motion-safe:animate-[warroom-flag_4.6s_ease-in-out_infinite_reverse]" />
+      <div className="warroom-flag absolute right-[3%] top-[10%] h-28 w-40 origin-top-right rotate-6 bg-orange-600/55 [clip-path:polygon(0_18%,100%_0,100%_100%,30%_86%,0_64%,22%_42%)] shadow-[0_0_24px_rgba(234,88,12,0.28)] motion-safe:animate-[warroom-flag-right_4.6s_ease-in-out_infinite_reverse]" />
       <div className="absolute bottom-0 left-1/2 h-40 w-72 -translate-x-1/2 rounded-full bg-orange-600/20 blur-3xl motion-safe:animate-[warroom-flicker_2.2s_ease-in-out_infinite]" />
     </div>
   )
