@@ -13,7 +13,7 @@ export default function HomePage() {
         style={{ backgroundImage: `url(${warRoomImage})` }}
       />
       <WarRoomAtmosphere />
-      <div aria-hidden className="absolute inset-0 bg-black/35" />
+      <div aria-hidden className="absolute inset-0 bg-[#120805]/55" />
       <div className="relative z-10 flex flex-col items-center gap-6 text-center">
         <p className="font-mono text-xs font-semibold uppercase tracking-[0.35em] text-orange-200/80">
           Enter the War Room

@@ -2,9 +2,9 @@
 
 import { cn } from '@/lib/utils'
 
-const sparks = Array.from({ length: 18 }, (_, index) => ({
-  left: `${8 + ((index * 47) % 84)}%`,
-  bottom: `${8 + ((index * 19) % 34)}%`,
+const sparks = Array.from({ length: 26 }, (_, index) => ({
+  left: `${5 + ((index * 47) % 90)}%`,
+  bottom: `${2 + ((index * 19) % 24)}%`,
   delay: `${(index % 7) * 0.35}s`,
   duration: `${2.4 + (index % 5) * 0.45}s`,
   size: `${3 + (index % 3)}px`,
@@ -20,12 +20,13 @@ export function WarRoomAtmosphere({ className }: { className?: string }) {
       {sparks.map((spark, index) => (
         <span
           key={index}
-          className="warroom-spark absolute rounded-full bg-orange-300 shadow-[0_0_10px_3px_rgba(249,115,22,0.75)]"
+          className="warroom-spark absolute rounded-full bg-orange-500 shadow-[0_0_12px_4px_rgba(234,88,12,0.9)]"
           style={{ left: spark.left, bottom: spark.bottom, width: spark.size, height: spark.size, animationDelay: spark.delay, animationDuration: spark.duration }}
         />
       ))}
-      <div className="absolute left-0 top-0 h-40 w-32 origin-top-left -rotate-6 bg-orange-950/20 blur-xl motion-safe:animate-[warroom-flag_4s_ease-in-out_infinite]" />
-      <div className="absolute right-0 top-0 h-40 w-32 origin-top-right rotate-6 bg-orange-950/20 blur-xl motion-safe:animate-[warroom-flag_4.6s_ease-in-out_infinite_reverse]" />
+      <div className="warroom-flag absolute left-[3%] top-[10%] h-28 w-40 origin-top-left -rotate-6 bg-orange-600/55 [clip-path:polygon(0_0,100%_18%,78%_42%,100%_64%,70%_86%,0_100%)] shadow-[0_0_24px_rgba(234,88,12,0.28)] motion-safe:animate-[warroom-flag_4s_ease-in-out_infinite]" />
+      <div className="warroom-flag absolute right-[3%] top-[10%] h-28 w-40 origin-top-right rotate-6 bg-orange-600/55 [clip-path:polygon(0_18%,100%_0,100%_100%,30%_86%,0_64%,22%_42%)] shadow-[0_0_24px_rgba(234,88,12,0.28)] motion-safe:animate-[warroom-flag_4.6s_ease-in-out_infinite_reverse]" />
+      <div className="absolute bottom-0 left-1/2 h-40 w-72 -translate-x-1/2 rounded-full bg-orange-600/20 blur-3xl motion-safe:animate-[warroom-flicker_2.2s_ease-in-out_infinite]" />
     </div>
   )
 }
