@@ -21,7 +21,7 @@ import { easeDramatic } from '@/lib/animations/variants'
 // ─── Shared style tokens ────────────────────────────────────────────────────
 
 const INPUT_CLASSES = cn(
-  'bg-[color:var(--color-chessboard-ink)] border-[color:var(--color-chessboard-ink)]',
+  'bg-transparent border-white/35',
   'text-white placeholder:text-white/65 caret-white',
   'focus-visible:border-[color:var(--color-chessboard-gold)]/60 focus-visible:ring-[color:var(--color-chessboard-gold)]/20',
 )
