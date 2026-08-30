@@ -78,7 +78,7 @@ export default function HomePage() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
         className="fixed w-full z-50 backdrop-blur-md"
-        style={{ borderBottom: '1px solid color-mix(in srgb, var(--wr-ash) 10%, transparent)', background: 'color-mix(in srgb, var(--wr-black) 88%, transparent)' }}
+        style={{ borderBottom: '1px solid color-mix(in srgb, var(--wr-ash) 10%, transparent)', background: 'color-mix(in srgb, var(--background) 92%, transparent)' }}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
@@ -88,7 +88,7 @@ export default function HomePage() {
                 className="h-9 w-9 rounded-sm flex items-center justify-center font-bold text-sm"
                 style={{
                   background: 'linear-gradient(135deg, var(--wr-black), var(--wr-rampart))',
-                  color: 'var(--wr-ivory)',
+                  color: 'var(--foreground)',
                   border: '1px solid color-mix(in srgb, var(--wr-ash) 30%, transparent)',
                   boxShadow: '0 0 16px rgba(200,200,200,0.15)',
                   fontFamily: "var(--font-inter, 'Inter', sans-serif)",
@@ -98,18 +98,18 @@ export default function HomePage() {
                 KK
               </motion.div>
               <div>
-                <span className="font-bold text-base" style={{ fontFamily: "var(--font-inter, 'Inter', sans-serif)", color: 'var(--wr-ivory)', letterSpacing: '0.04em' }}>
+                <span className="font-bold text-base" style={{ fontFamily: "var(--font-inter, 'Inter', sans-serif)", color: 'var(--foreground)', letterSpacing: '0.04em' }}>
                   KK's WarRoom
                 </span>
-                <div className="text-[9px] tracking-[0.18em] text-neutral-500 uppercase -mt-0.5">Entrepreneurship Experience Platform</div>
+                <div className="text-[9px] tracking-[0.18em] text-muted-foreground uppercase -mt-0.5">Entrepreneurship Experience Platform</div>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <Link href="/terms" className="text-xs text-neutral-500 hover:text-neutral-300 transition-colors" style={{ letterSpacing: '0.06em' }}>
+              <Link href="/terms" className="text-xs text-muted-foreground hover:text-foreground transition-colors" style={{ letterSpacing: '0.06em' }}>
                 Terms
               </Link>
               <Link href="/login">
-                <Button variant="outline" size="sm" className="text-xs border-neutral-700 text-neutral-400 hover:border-neutral-500 hover:text-neutral-200">
+                <Button variant="outline" size="sm" className="text-xs border-border text-muted-foreground hover:border-accent hover:text-foreground">
                   Sign In
                 </Button>
               </Link>
@@ -139,13 +139,13 @@ export default function HomePage() {
           <FadeInUp delay={0.1}>
             <SigilBadge icon={Target} tone="silver" className="mb-8">
               The Founder Simulation
-              <Star className="h-3 w-3 fill-zinc-400 text-zinc-400 ml-1" />
+              <Star className="h-3 w-3 fill-zinc-400 text-muted-foreground ml-1" />
             </SigilBadge>
           </FadeInUp>
 
           <FadeInUp delay={0.25}>
             <h1 ref={heroTitleRef} className="mb-6" style={{ fontFamily: "var(--font-inter, 'Inter', sans-serif)", fontSize: 'clamp(2.4rem, 7vw, 5rem)', fontWeight: 900, lineHeight: 1.1, letterSpacing: '-0.02em' }}>
-              <span style={{ color: 'var(--wr-ivory)' }}>Prove Your Edge to the</span>
+              <span style={{ color: 'var(--foreground)' }}>Prove Your Edge to the</span>
               <br />
               <span className="gradient-text-animate" style={{ display: 'inline-block', paddingBottom: '0.1em' }}>
                 Expert Panel
@@ -185,7 +185,7 @@ export default function HomePage() {
             </div>
             <p className="mt-5 text-xs" style={{ color: 'color-mix(in srgb, var(--wr-smoke) 80%, transparent)', letterSpacing: '0.06em' }}>
               By entering, you agree to the{' '}
-              <Link href="/terms" className="text-neutral-500 hover:text-neutral-300">Terms &amp; Conditions</Link>
+              <Link href="/terms" className="text-muted-foreground hover:text-foreground">Terms &amp; Conditions</Link>
             </p>
           </FadeInUp>
 
@@ -204,7 +204,7 @@ export default function HomePage() {
                   style={{
                     background: `radial-gradient(circle at 30% 30%, ${p.color}60, ${p.color}20)`,
                     borderColor: `${p.color}50`,
-                    color: 'var(--wr-ivory)',
+                    color: 'var(--foreground)',
                     boxShadow: `0 0 10px ${p.color}30`,
                     fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                     fontSize: '0.6rem',
@@ -229,13 +229,13 @@ export default function HomePage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="px-4 py-24 sm:px-6 lg:px-8 relative" style={{ background: 'linear-gradient(180deg, color-mix(in srgb, var(--wr-black) 30%, transparent), color-mix(in srgb, var(--wr-obsidian) 50%, transparent), color-mix(in srgb, var(--wr-black) 30%, transparent))' }}>
+      <section className="px-4 py-24 sm:px-6 lg:px-8 relative" style={{ background: 'linear-gradient(180deg, color-mix(in srgb, var(--background) 88%, transparent), color-mix(in srgb, var(--card) 92%, transparent), color-mix(in srgb, var(--background) 88%, transparent))' }}>
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at center top, color-mix(in srgb, var(--wr-ivory) 3%, transparent), transparent 60%)' }} />
         <div className="mx-auto max-w-6xl relative">
           <FadeInUp>
             <div className="text-center mb-16">
               <SigilBadge tone="silver" className="mb-4">The Process</SigilBadge>
-              <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: "var(--font-inter, 'Inter', sans-serif)", color: 'var(--wr-ivory)', letterSpacing: '-0.02em' }}>
+              <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: "var(--font-inter, 'Inter', sans-serif)", color: 'var(--foreground)', letterSpacing: '-0.02em' }}>
                 Three Stages to Your Verdict
               </h2>
               <p style={{ color: 'var(--wr-smoke)', fontSize: '0.9rem', letterSpacing: '0.01em' }}>
@@ -254,7 +254,7 @@ export default function HomePage() {
                     accent={stage.accent}
                     sigilWatermark={stage.sigil}
                     className="group"
-                    style={{ background: 'linear-gradient(160deg, rgba(18,18,18,0.95) 0%, rgba(12,12,12,0.98) 100%)' }}
+                    style={{ background: 'linear-gradient(160deg, color-mix(in srgb, var(--card) 96%, transparent), color-mix(in srgb, var(--background) 98%, transparent))' }}
                   >
                     <div className="mb-5 flex items-center gap-3">
                       <div
@@ -270,10 +270,10 @@ export default function HomePage() {
                       </div>
                       <Icon className="h-5 w-5" style={{ color: stage.accent, opacity: 1 }} aria-hidden />
                     </div>
-                    <h3 className="font-semibold text-lg mb-2 text-[#F4F4F5]" style={{ fontFamily: "var(--font-inter, 'Inter', sans-serif)", letterSpacing: '-0.01em' }}>
+                    <h3 className="font-semibold text-lg mb-2 text-foreground" style={{ fontFamily: "var(--font-inter, 'Inter', sans-serif)", letterSpacing: '-0.01em' }}>
                       {stage.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-[#A1A1AA]">
+                    <p className="text-sm leading-relaxed text-muted-foreground">
                       {stage.desc}
                     </p>
                   </StoneCard>
@@ -285,16 +285,16 @@ export default function HomePage() {
       </section>
 
       {/* PILLARS */}
-      <section className="px-4 py-24 sm:px-6 lg:px-8 relative overflow-hidden" style={{ background: '#080808' }}>
+      <section className="px-4 py-24 sm:px-6 lg:px-8 relative overflow-hidden" style={{ background: 'var(--card)' }}>
         <NoiseOverlay opacity={0.03} />
         <div className="mx-auto max-w-6xl relative z-10">
           <FadeInUp>
             <div className="text-center mb-16">
               <SigilBadge tone="gold" className="mb-4">The Panel</SigilBadge>
-              <h2 className="text-3xl font-bold mb-4 text-white" style={{ fontFamily: "var(--font-inter, 'Inter', sans-serif)", letterSpacing: '-0.02em' }}>
+              <h2 className="text-3xl font-bold mb-4 text-foreground" style={{ fontFamily: "var(--font-inter, 'Inter', sans-serif)", letterSpacing: '-0.02em' }}>
                 Three Perspectives. One Verdict.
               </h2>
-              <p className="text-zinc-400" style={{ fontSize: '0.9rem' }}>
+              <p className="text-muted-foreground" style={{ fontSize: '0.9rem' }}>
                 Their priorities will conflict. Your judgment determines the outcome.
               </p>
             </div>
@@ -313,7 +313,7 @@ export default function HomePage() {
                   >
                     <Icon className="h-6 w-6" style={{ color: h.color }} aria-hidden />
                   </motion.div>
-                  <h3 className="font-bold text-lg mb-2" style={{ fontFamily: "var(--font-inter, 'Inter', sans-serif)", color: 'var(--wr-ivory)', letterSpacing: '-0.01em' }}>{h.name}</h3>
+                  <h3 className="font-bold text-lg mb-2" style={{ fontFamily: "var(--font-inter, 'Inter', sans-serif)", color: 'var(--foreground)', letterSpacing: '-0.01em' }}>{h.name}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: 'var(--wr-smoke)', letterSpacing: '0.01em' }}>{h.desc}</p>
                 </StoneCard>
               )
@@ -337,7 +337,7 @@ export default function HomePage() {
             </h2>
           </FadeInUp>
           <FadeInUp delay={0.2}>
-            <p className="text-base mb-6 text-zinc-800 dark:text-zinc-400" style={{ maxWidth: '36rem', margin: '0 auto 2rem', lineHeight: 1.8 }}>
+            <p className="text-base mb-6 text-zinc-800 dark:text-muted-foreground" style={{ maxWidth: '36rem', margin: '0 auto 2rem', lineHeight: 1.8 }}>
               The Financial Strategist demands unit economics above all. The Brand Builder insists culture drives retention.
               The Scale Operator warns against premature growth. The Market Analyst sees a closing window.
             </p>
@@ -353,7 +353,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="px-4 py-24 sm:px-6 lg:px-8 relative overflow-hidden bg-black">
+      <section className="px-4 py-24 sm:px-6 lg:px-8 relative overflow-hidden bg-background">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, rgba(200,168,74,0.02), transparent 60%)' }} />
           <div className="absolute bottom-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(200,168,74,0.25), transparent)' }} />
@@ -361,12 +361,12 @@ export default function HomePage() {
         <div className="mx-auto max-w-3xl text-center relative z-10">
           <FadeInUp>
             <div className="mb-4 flex justify-center text-4xl text-zinc-100">♔</div>
-            <h2 className="text-3xl font-bold mb-4 text-white" style={{ fontFamily: "var(--font-inter, 'Inter', sans-serif)", letterSpacing: '-0.02em' }}>
+            <h2 className="text-3xl font-bold mb-4 text-foreground" style={{ fontFamily: "var(--font-inter, 'Inter', sans-serif)", letterSpacing: '-0.02em' }}>
               Ready to Enter the Room?
             </h2>
           </FadeInUp>
           <FadeInUp delay={0.1}>
-            <p className="text-base mb-10 max-w-lg mx-auto text-zinc-400" style={{ letterSpacing: '0.01em' }}>
+            <p className="text-base mb-10 max-w-lg mx-auto text-muted-foreground" style={{ letterSpacing: '0.01em' }}>
               Two attempts. Six stages. One verdict. Your roadmap starts here.
             </p>
           </FadeInUp>
@@ -381,12 +381,12 @@ export default function HomePage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="px-4 py-10 sm:px-6 lg:px-8 text-center bg-black" style={{ borderTop: '1px solid rgba(200,168,74,0.15)' }}>
+      <footer className="px-4 py-10 sm:px-6 lg:px-8 text-center bg-background" style={{ borderTop: '1px solid rgba(200,168,74,0.15)' }}>
         <div className="text-3xl mb-3 text-zinc-700">♟</div>
-        <p className="text-xs text-zinc-400" style={{ letterSpacing: '0.08em', fontFamily: "var(--font-inter, 'Inter', sans-serif)" }}>
+        <p className="text-xs text-muted-foreground" style={{ letterSpacing: '0.08em', fontFamily: "var(--font-inter, 'Inter', sans-serif)" }}>
           © 2026 KK&apos;s WarRoom — All Rights Reserved
         </p>
-        <p className="mt-1 text-xs text-zinc-500" style={{ letterSpacing: '0.04em' }}>
+        <p className="mt-1 text-xs text-muted-foreground" style={{ letterSpacing: '0.04em' }}>
           Precision under pressure. Powered by AI.
         </p>
       </footer>
