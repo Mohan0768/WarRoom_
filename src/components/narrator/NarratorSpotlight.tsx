@@ -42,7 +42,9 @@ export function NarratorSpotlight({ targetElementId }: NarratorSpotlightProps) {
       return
     }
 
-    const update = () => {
+    let frame = 0
+    const measure = () => {
+      frame = 0
       const el = document.getElementById(targetElementId)
       if (!el) {
         setRect(null)
@@ -55,6 +57,9 @@ export function NarratorSpotlight({ targetElementId }: NarratorSpotlightProps) {
         width: r.width + PADDING * 2,
         height: r.height + PADDING * 2,
       })
+    }
+    const update = () => {
+      if (frame === 0) frame = requestAnimationFrame(measure)
     }
 
     update()
@@ -72,6 +77,7 @@ export function NarratorSpotlight({ targetElementId }: NarratorSpotlightProps) {
     return () => {
       window.removeEventListener('resize', update)
       window.removeEventListener('scroll', update, { capture: true } as never)
+      if (frame) cancelAnimationFrame(frame)
       if (ro) ro.disconnect()
     }
   }, [targetElementId, mounted])
