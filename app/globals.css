@@ -489,6 +489,29 @@
 }
 
 /* ============================================================
+ * WAR ROOM — restrained fire and flag motion
+ * ============================================================ */
+@keyframes warroom-spark {
+  0% { opacity: 0; transform: translate3d(0, 12px, 0) scale(0.6); }
+  18% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(18px, -150px, 0) scale(0.15); }
+}
+
+@keyframes warroom-flicker {
+  0%, 100% { opacity: 0.45; transform: scaleY(0.94) skewX(-4deg); }
+  50% { opacity: 0.8; transform: scaleY(1.08) skewX(5deg); }
+}
+
+@keyframes warroom-flag {
+  0%, 100% { transform: rotate(-6deg) skewY(0deg); }
+  50% { transform: rotate(-3deg) skewY(3deg) translateX(4px); }
+}
+
+.warroom-spark {
+  animation: warroom-spark 3s ease-out infinite;
+}
+
+/* ============================================================
  * CHESS PREMIUM — subtle ambient animations
  * ============================================================ */
 @keyframes piece-shimmer {
