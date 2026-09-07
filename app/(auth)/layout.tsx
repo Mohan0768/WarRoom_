@@ -14,7 +14,7 @@ export default function AuthLayout({
     <div className="relative min-h-screen overflow-hidden text-[color:var(--color-chessboard-ivory)]">
       <div aria-hidden className="pointer-events-none fixed inset-0 z-0 overflow-hidden bg-[color:var(--color-chessboard-charcoal)]">
         <video
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
           autoPlay
           loop
           muted
