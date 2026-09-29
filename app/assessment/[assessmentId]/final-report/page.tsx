@@ -19,6 +19,7 @@ import { ResponsesTab } from './_sections/ResponsesTab'
 import { GoldDivider } from '@/src/components/primitives'
 import { easeDramatic } from '@/lib/animations/variants'
 import { NoiseOverlay } from '@/src/components/effects/NoiseOverlay'
+import { DownloadReportButton } from './DownloadReportButton'
 
 // ============================================
 // Final Report — thin orchestrator shell
@@ -129,9 +130,10 @@ export default function FinalReportPage() {
             Dashboard
           </Link>
 
-          <div className="flex items-center gap-3 mb-3">
-            <ScrollText className="h-6 w-6 text-[color:var(--color-chessboard-silver)]" />
-            <h1
+          <div className="flex items-start justify-between gap-4 mb-3">
+            <div className="flex items-center gap-3">
+              <ScrollText className="h-6 w-6 text-[color:var(--color-chessboard-silver)]" />
+              <h1
               className="text-xl sm:text-2xl font-bold tracking-[0.04em]"
               style={{
                 fontFamily: 'var(--font-display)',
@@ -140,9 +142,11 @@ export default function FinalReportPage() {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}
-            >
-              Evaluation Report
-            </h1>
+              >
+                Evaluation Report
+              </h1>
+            </div>
+            <DownloadReportButton report={report} />
           </div>
           <p
             className="text-sm text-[color:var(--color-chessboard-smoke)]"
